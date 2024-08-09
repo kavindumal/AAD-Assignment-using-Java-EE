@@ -1,374 +1,83 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     text-decoration: none;
+    color: #333;
 }
 
-header{
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    background-color: #ffff;
+    padding: 20px 40px;
+    background-color: #ffffff;
     position: fixed;
     width: 100%;
-    z-index: 1;
-    border-bottom: 2px solid #00aeff;
+    z-index: 1000;
+    border-bottom: 4px solid #009688;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-header .sectionName{
-    color: #00aeff;
-    font-size: 1.5rem;
-    font-weight: 500;
+header:hover {
+    background-color: #f1f1f1;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+header .sectionName {
+    color: #009688;
+    font-size: 2rem;
+    font-weight: 700;
     letter-spacing: 1px;
+    transition: color 0.3s ease;
 }
 
-header ul{
+header ul {
     list-style: none;
     display: flex;
-    gap: 0vw;
+    gap: 1.5rem;
 }
 
-header ul li{
-    background-color: #ffff;
-    font-size: 1rem;
+header ul li {
+    font-size: 1.1rem;
     cursor: pointer;
-    font-weight: 400;
-    padding: 10px 20px;
-    /* border: 1px solid #c4c4c4; */
+    font-weight: 500;
+    padding: 12px 20px;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-header ul li a{
-    color: #00aeff;
-    letter-spacing: 0.7px;
-    transition: 0.3s;
+header ul li a {
+    color: #009688;
+    transition: color 0.3s ease;
 }
 
 header ul li a:hover {
-    color: #ff0000;
-    border-bottom: 1px solid #ff0000;
+    color: #ff5722;
+    border-bottom: 2px solid #ff5722;
 }
-
-header ul li a:active{
-    color: #ff0000;
-
-}
-
-.carousel{
-    background: linear-gradient(to top, #00c3ff, #ffffff);
-
-
-}
-
-section > div{
-    display: grid;
-    grid-template-columns: 40% 60%;
-    font-size: 18px;
-    padding: 1vw;
-
-}
-
-section > :first-child > div{
-    margin-top: 12vh;
-}
-
-.title{
-    font-size: 2rem;
-    font-weight: 500;
-    color: #00ffff;
-}
-
-form div{
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    margin-top: 34px;
-
-
-}
-form div input{
-    padding: 10px 20px;
-    border: 1px solid #00c1f1;
-    border-radius: 30px;
-    color: #00ff62;
-
-}
-
-
-form div select{
-    padding: 10px 20px;
-    border: 1px solid #c4c4c4;
-    border-radius: 30px;
-}
-
-.buttons{
-    flex-direction: row;
-    font-size: 18px !important;
-    gap: 26px;
-}
-
-.buttons button{
-    padding: 15px 28px;
-    border: 1px solid #c4c4c4;
-    cursor: pointer;
-    border-radius: 41px;
-    background-color: #ffff;
-    transition: 0.5s;
-}
-
-.buttons button:hover{
-    color: #ffff;
-}
-
-.buttons > :first-child{
-    border-color: #56ABF6;
-}
-
-.buttons > :first-child:hover{
-    background-color: #56ABF6;
-}
-
-.buttons > :nth-child(2){
-    border-color: #DB3843;
-}
-
-.buttons > :nth-child(2):hover{
-    background-color: #DB3843;
-}
-
-.buttons > :nth-child(3){
-    border-color: #FEBF04;
-}
-
-.buttons > :nth-child(3):hover{
-    background-color: #FEBF04;
-}
-
-.buttons > :nth-child(4){
-    border-color: #24A746;
-}
-
-.buttons > :nth-child(4):hover{
-    background-color: #24A746;
-}
-
-.buttons > :last-child{
-    border-color: #D43A40;
-}
-
-.buttons > :last-child:hover{
-    background-color: #D43A40;
-}
-
-#CustomerManage table , #ItemManage table{
-    margin-left: 50px;
-}
-
-#CustomerManage th , #CustomerManage td , #ItemManage th , #ItemManage td{
-    border: 2px solid #1691e4;
-    width: 20vw;
-    height: 4vw;
-    text-align: center;
-}
-
-#CustomerManage th , #ItemManage th{
-    background-color: #94e6ff;
-    color: rgb(0, 0, 0);
-}
-
-section{
-    display: none;
-}
-
-.includeDetails{
-    border: 1px solid #000000;
-    padding: 20px;
-}
-
-#OrderManage > div {
-    display: flex;
-    justify-content: space-around;
-}
-
-#OrderManage > :first-child > div{
-    margin-top: 12vh;
-}
-
-#OrderManage h1{
-    font-size: 1.5rem;
-    font-weight: 500;
-    background-color: #33c7c0;
-    padding: 10px 20px;
-    color: white;
-}
-
-#OrderManage .includeDetails form div > div ,#OrderManage .includeDetails form > :last-child{
-    margin-top: 0;
-    margin: 10px 15px;
-}
-
-#OrderManage .includeDetails form > :first-child{
-    display: grid;
-    grid-template-columns: 50% 50%;
-}
-
-#OrderManage .ItemSelect form > :first-child{
-    display: grid;
-    grid-template-columns: 50% 50%;
-}
-
-#OrderManage .ItemSelect form div > div , #OrderManage .ItemSelect form > :last-child{
-    margin-top: 0;
-    margin: 10px 15px;
-}
-
-#OrderManage .ItemSelect form > :nth-child(2){
-    display: grid;
-    grid-template-columns: 40% 39% 20%;
-    margin: 0;
-}
-
-.ItemSelect > :last-child{
-    display: flex;
-    justify-content: end;
-}
-
-.ItemSelect button{
-    padding: 10px 20px;
-    border: 1px solid #c4c4c4;
-    cursor: pointer;
-    background-color: #24A746;
-    color: white;
-    margin-top: 30px;
-    margin-right: 20px;
-}
-
-.ItemSelect{
-    border: 1px solid #000000;
-    padding: 20px;
-}
-
-#OrderManage .TotalCal h1 , .TotalCal h2{
-    background-color: transparent;
-    padding: 0;
-    font-size: 30px;
-    color: #39dbf8;
-    font-weight: 400;
-}
-
-.TotalCal {
-    border: 1px solid #000000;
-    padding: 20px;
-}
-
-.TotalCal h2{
-    color: #D43A40;
-}
-
-.TotalCal form > :first-child{
-    display: grid;
-    grid-template-columns: 50% 50%;
-}
-
-.TotalCal > :last-child{
-    display: flex;
-    justify-content: center;
-}
-
-.TotalCal button{
-    padding: 20px 30px;
-    border: 1px solid #c4c4c4;
-    cursor: pointer;
-    background-color: #00ffff;
-    color: white;
-    margin-top: 50px;
-}
-
-
-/* #OrderManage th , #OrderManage td{
-    width: 18vw;
-    height: 4vw;
-    text-align: center;
-    margin: 0;
-}
-
-#OrderManage th{
-    background-color: #04affe;
-    color: white;
-}
-
-#OrderManage tbody{
-    width: 1vh;
-    overflow-y: scroll;
-} */
-
-.tableRow{
-   height: auto;
-}
-
-.table > div , .tableRows > div{
-    display: flex;
-}
-
-.table , .tableRows{
-    display: flex;
-    flex-direction: column;
-    padding: 0 5.7vw;
-}
-
-.table > div > div , .tableRows > div > div{
-    width: 18vw;
-    height: 4vw;
-    border: 0.5px solid #000000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.tableRows > div > div{
-    width: 20vw;
-}
-
-#OrderManage > :last-child{
-    display: flex;
-    flex-direction: column;
-    overflow-y: scroll;
-    max-height: 34vh;
-}
-
-.table > div > div{
-    background: linear-gradient(to top, #24A746, #bdffb4);
-    color: white;
-}
-
-h5{
-    font-size: 15px;
-    color: #ff4343;
-    font-weight: 400;
-    position: absolute;
-    margin-top: 8.1vh;
-}
-
 
 .carousel {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 450px;
     overflow: hidden;
+    background: linear-gradient(to top, #009688, #ffffff);
+    border-bottom: 4px solid #009688;
 }
 
 .carousel-inner {
     display: flex;
     height: 100%;
-    transition: transform 0.5s ease;
+    transition: transform 0.5s ease-in-out;
 }
 
 .carousel-item {
     min-width: 100%;
-    box-sizing: border-box;
     height: 100%;
 }
 
@@ -376,34 +85,339 @@ h5{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: opacity 0.5s ease;
 }
 
 .carousel-control {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.4);
     border: none;
     color: white;
-    font-size: 2em;
-    padding: 10px;
+    font-size: 2.5em;
+    padding: 15px;
     cursor: pointer;
     z-index: 1000;
+    border-radius: 50%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .carousel-control:hover {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6);
+    transform: scale(1.1);
 }
 
 .carousel-control.prev {
-    left: 10px;
+    left: 20px;
 }
 
 .carousel-control.next {
-    right: 10px;
+    right: 20px;
 }
 
-#homePage > div{
+section > div {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    font-size: 1.2rem;
+    padding: 2.5rem;
+    gap: 20px;
+}
+
+section > :first-child > div {
+    margin-top: 12vh;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #00bcd4;
+    margin-bottom: 20px;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+form div input,
+form div select {
+    padding: 15px 30px;
+    border-radius: 30px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form div input {
+    border: 1px solid #009688;
+    color: #333;
+}
+
+form div select {
+    border: 1px solid #c4c4c4;
+}
+
+form div input:focus,
+form div select:focus {
+    border-color: #009688;
+    box-shadow: 0 0 8px rgba(0, 150, 136, 0.5);
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    font-size: 1.2rem;
+    gap: 25px;
+}
+
+.buttons button {
+    padding: 15px 35px;
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+    background-color: #ffffff;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.buttons button:hover {
+    transform: scale(1.05);
+}
+
+.buttons > :first-child {
+    background-color: #009688;
+    color: #ffffff;
+}
+
+.buttons > :first-child:hover {
+    background-color: #00796b;
+}
+
+.buttons > :nth-child(2) {
+    background-color: #f44336;
+    color: #ffffff;
+}
+
+.buttons > :nth-child(2):hover {
+    background-color: #c62828;
+}
+
+.buttons > :nth-child(3) {
+    background-color: #ffc107;
+    color: #ffffff;
+}
+
+.buttons > :nth-child(3):hover {
+    background-color: #ff9800;
+}
+
+.buttons > :nth-child(4) {
+    background-color: #4caf50;
+    color: #ffffff;
+}
+
+.buttons > :nth-child(4):hover {
+    background-color: #388e3c;
+}
+
+.buttons > :last-child {
+    background-color: #e53935;
+    color: #ffffff;
+}
+
+.buttons > :last-child:hover {
+    background-color: #c62828;
+}
+
+#CustomerManage table, #ItemManage table {
+    margin-left: 40px;
+}
+
+#CustomerManage th, #CustomerManage td, #ItemManage th, #ItemManage td {
+    border: 2px solid #009688;
+    width: 18vw;
+    height: 4vw;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+#CustomerManage th, #ItemManage th {
+    background-color: #e0f2f1;
+    color: #004d40;
+}
+
+section {
+    display: none;
+}
+
+.includeDetails {
+    border: 1px solid #cccccc;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+#OrderManage > div {
+    display: flex;
+    justify-content: space-around;
+}
+
+#OrderManage > :first-child > div {
+    margin-top: 12vh;
+}
+
+#OrderManage h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    background-color: #00bcd4;
+    padding: 15px;
+    color: white;
+}
+
+#OrderManage .includeDetails form div > div, #OrderManage .includeDetails form > :last-child {
+    margin-top: 0;
+    margin: 15px 20px;
+}
+
+#OrderManage .includeDetails form > :first-child {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+#OrderManage .ItemSelect form > :first-child {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+#OrderManage .ItemSelect form div > div, #OrderManage .ItemSelect form > :last-child {
+    margin-top: 0;
+    margin: 15px 20px;
+}
+
+#OrderManage .ItemSelect form > :nth-child(2) {
+    display: grid;
+    grid-template-columns: 40% 39% 20%;
+    margin: 0;
+}
+
+.ItemSelect > :last-child {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.ItemSelect button {
+    padding: 12px 25px;
+    border: none;
+    cursor: pointer;
+    background-color: #4caf50;
+    color: white;
+    margin-top: 20px;
+    margin-right: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.ItemSelect button:hover {
+    background-color: #388e3c;
+    transform: scale(1.05);
+}
+
+.ItemSelect {
+    border: 1px solid #cccccc;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+#OrderManage .TotalCal h1, .TotalCal h2 {
+    background-color: transparent;
+    padding: 0;
+    font-size: 1.8rem;
+    color: #00bcd4;
+    font-weight: 500;
+}
+
+.TotalCal {
+    border: 1px solid #cccccc;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.TotalCal h2 {
+    color: #e53935;
+}
+
+.TotalCal form > :first-child {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.TotalCal > :last-child {
+    display: flex;
+    justify-content: center;
+}
+
+.TotalCal button {
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    background-color: #00bcd4;
+    color: white;
+    margin-top: 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.TotalCal button:hover {
+    background-color: #0097a7;
+    transform: scale(1.05);
+}
+
+.tableRow {
+    height: auto;
+}
+
+.table > div, .tableRows > div {
+    display: flex;
+}
+
+.table, .tableRows {
+    display: flex;
+    flex-direction: column;
+    padding: 0 6vw;
+}
+
+.table > div > div, .tableRows > div > div {
+    width: 22vw;
+    height: 5vw;
+    border: 1px solid #009688;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.tableRows > div > div {
+    width: 24vw;
+}
+
+#OrderManage > :last-child {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    max-height: 40vh;
+}
+
+.table > div > div {
+    background: linear-gradient(to top, #4caf50, #dcedc8);
+    color: white;
+}
+
+h5 {
+    font-size: 1.1rem;
+    color: #f44336;
+    font-weight: 500;
+    position: relative;
+    margin-top: 6vh;
+}
+
+#homePage > div {
     margin: 0;
     display: flex;
     justify-content: center;
@@ -413,60 +427,57 @@ h5{
     padding: 0;
 }
 
-table{
+table {
     border-collapse: collapse;
 }
 
-.counts > div{
+.counts > div {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50px;
-
+    gap: 30px;
 }
 
-.counts > div > div{
+.counts > div > div {
     border: 1px solid #00e1ff;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #ffffff5d;
-    width: 20%;
+    background-color: #ffffffcc;
+    width: 30%;
     text-align: center;
-    padding: 10px 0px;
-    backdrop-filter: blur(20px);
-    border-radius: 30px;
-    box-shadow: 0 0 10px 0 #424242;
-    transition: transform 0.5s ease;
-
+    padding: 25px 15px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.counts > div > div:hover{
+.counts > div > div:hover {
     transform: scale(1.1);
-
+    background-color: #e0f2f1;
 }
 
-.counts h1{
+.counts h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #009688;
+}
+
+.counts h2 {
     font-size: 2rem;
     font-weight: 500;
-    color: #00aeff;
-}
-
-.counts h2{
-    font-size: 1.5rem;
-    font-weight: 500;
-    color: #035c00;
+    color: #00796b;
     margin-top: 20px;
 }
 
-.counts img{
-    width: 30%;
-    margin-top: 10px;
+.counts img {
+    width: 40%;
+    margin-top: 15px;
 }
 
-#homePage .counts{
+#homePage .counts {
     position: absolute;
     display: block;
     height: auto;
@@ -477,17 +488,17 @@ table{
 }
 
 footer {
-    background-color: #333; /* Light black background */
-    color: #fff; /* White text color */
+    background-color: #212121;
+    color: #e0e0e0;
     text-align: center;
-    padding: 10px 0;
+    padding: 20px 0;
     position: fixed;
     width: 100%;
     bottom: 0;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .footer-content p {
     margin: 0;
     font-size: 14px;
 }
-
